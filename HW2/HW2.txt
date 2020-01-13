@@ -1,0 +1,15 @@
+Задание 2. Создайте базу данных example, разместите в ней таблицу users, состоящую из двух столбцов, числового id и строкового name.
+
+mysql> create database example;
+mysql> use example;
+mysql> create table if not exists users (id serial, name varchar(255) not null);
+
+Задание 3. Создайте дамп базы данных example из предыдущего задания, разверните содержимое дампа в новую базу данных sample.
+
+mysqldump example > example.sql
+mysql> create database sample;
+mysql sample < example.sql
+
+Задание 4. Ознакомьтесь более подробно с документацией утилиты mysqldump. Создайте дамп единственной таблицы help_keyword базы данных mysql. Причем добейтесь того, чтобы дамп содержал только первые 100 строк таблицы.
+
+mysqldump mysql help_keyword --where='TRUE LIMIT 100' > keyword_dump.sql
