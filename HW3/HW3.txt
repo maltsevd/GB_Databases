@@ -1,0 +1,5 @@
+mysql>DROP DATABASE vk;
+mysql>CREATE DATABASE vk;
+
+mysql vk < generatedDb.sql
+
