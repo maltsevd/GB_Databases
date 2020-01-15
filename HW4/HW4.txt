@@ -1,0 +1,14 @@
+Дополнил базу таблицами и заполнил их, дамп прилагаю.
+
+По курсовой работе было бы интересно(и, надеюсь, полезно) поработать с kaggle.com
+
+По лайкам есть такая идея: в таблицу добавить имя таблицы, к которой относится контент(медиа, посты и т.п.) и id этого контента.
+
+
+CREATE TABLE likes (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL ,
+  table_name VARCHAR(120) NOT NULL,
+  id_in_table INT UNSIGNED NOT NULL ,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+ );
